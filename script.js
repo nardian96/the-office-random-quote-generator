@@ -54,15 +54,19 @@ function getQuoteByID(charID) {
         })
     .then(
         (quote) => {
-        const quoteContainer = document.querySelector('.character__quote')
+        // const quoteContainer = document.querySelector('.character__quote')
+        const inputContainer = document.querySelector(".quote__container")
+        const quoteContainer = document.createElement('div')
         quoteContainer.innerHTML = "";
         const quoteBody = document.createElement('div')
         const quoteAuthor = document.createElement('div')
+        quoteContainer.classList.add('character__quote')
         quoteBody.classList.add('quote')
         quoteAuthor.classList.add('quote__author')
         quoteContainer.appendChild(quoteBody, quoteAuthor)
+        inputContainer.appendChild(quoteContainer)
         quoteBody.innerHTML = quote
-        
+
         }
     )
 }

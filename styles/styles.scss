@@ -1,0 +1,92 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 1440px;
+  height: 100vw;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.image {
+  &__background {
+    width: 100%;
+    height: 100vw;
+    background-color: darkkhaki;
+    // background-image: url('../assets/pablo-varela-hEw2qUhk-fw-unsplash.jpg');
+    // background-size: cover;
+    // background-repeat: no-repeat;
+  }
+}
+
+.quote {
+  &__title {
+    font-family: 'Courier New', Courier, monospace;
+    color: white ;
+    margin: 0;
+  }
+  &__container {
+    background-color: rgba(225, 225, 225, .5);
+    width: 40rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    div {
+      width: 80%;
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}
+
+.characters {
+  color: brown;
+  font-family: courier;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+}
+
+.character {
+  &__input {
+    label {
+      font-family: 'Courier New', Courier, monospace;
+      color: grey;
+      font-size: large;
+      font-weight: bold;
+    }
+    button {
+      background-color: black;
+      color: white;
+      border: none;
+      font-family: 'Courier New', Courier, monospace;
+    }
+  }
+  &__quote {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+  }
+}

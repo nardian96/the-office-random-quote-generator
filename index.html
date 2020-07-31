@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Office Quote Generator</title>
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-    <div>
-        <h1>The Office Quote Generator</h1>
+    <section class="image__background">
+    <h1 class="quote__title">The Office Quote Generator</h1>
+    <div class="quote__container">    
         <div>
             <form class="character__input">
                 <label for="characters">Choose a character:</label>
@@ -17,12 +19,13 @@
                 <!-- <input type="text" name="character"> -->
                 <button>Submit</button>
             </form>
-            <div class="character__quote">
-                <p></p> <!--quote-->
-                <div></div> <!--firstname, lastname-->
-            </div>
+            <!-- <div class="character__quote">
+                <p></p> 
+                <div></div>
+            </div> -->
         </div>
     </div>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./script.js"></script>
 </body>
