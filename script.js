@@ -43,12 +43,14 @@ function getQuoteByID(charID) {
     .then(
         (response) => {
             quotesData = response.data.data
+            console.log(quotesData);
             quotesArray = []
             quotesData.forEach(item => {
                 if (item.character._id === charID) {
                     quotesArray.push(item.content)
                 }
             })
+            console.log(quotesArray)
             let randomQuote = quotesArray[Math.floor(Math.random()*quotesArray.length)]
             return randomQuote
         })
@@ -56,29 +58,24 @@ function getQuoteByID(charID) {
         (quote) => {
         // const quoteContainer = document.querySelector('.character__quote')
         const inputContainer = document.querySelector(".quote__container")
+;       inputContainer.innerHTML = "";
         const quoteContainer = document.createElement('div')
-        quoteContainer.innerHTML = "";
         const quoteBody = document.createElement('div')
-        const quoteAuthor = document.createElement('div')
         quoteContainer.classList.add('character__quote')
-        quoteBody.classList.add('quote')
-        quoteAuthor.classList.add('quote__author')
-        quoteContainer.appendChild(quoteBody, quoteAuthor)
         inputContainer.appendChild(quoteContainer)
-        quoteBody.innerHTML = quote
-
+        quoteContainer.innerHTML = quote
         }
     )
 }
 
 //EVENT LISTENER
-const charForm = document.querySelector('.character__input') 
+const charForm = document.querySelector('.character__input')
 charForm.addEventListener("submit", function(event) {
     event.preventDefault();
     let charName = event.target.character.value;
     getCharID(charName).then((response) => {
         return getQuoteByID(response)
     })
-})  
+})
 
 

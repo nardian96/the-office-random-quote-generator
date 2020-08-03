@@ -8,23 +8,15 @@
 </head>
 <body>
     <section class="image__background">
-    <h1 class="quote__title">The Office Quote Generator</h1>
-    <div class="quote__container">    
-        <div>
-            <form class="character__input">
-                <label for="characters">Choose a character:</label>
-                <select class="characters" name="character">
-                    <option value=`${[fullName]`}></option>
-                </select>
-                <!-- <input type="text" name="character"> -->
-                <button>Submit</button>
-            </form>
-            <!-- <div class="character__quote">
-                <p></p> 
-                <div></div>
-            </div> -->
-        </div>
-    </div>
+    <h1 class="quote__title"><span>The Office</span> Quote Generator</h1>
+    <form class="character__input">
+        <label for="characters">Choose a character:</label>
+        <select class="characters" name="character">
+            <option value=`${[fullName]`}></option>
+        </select>
+        <button>Submit</button>
+    </form>  
+    <div class="quote__container"> </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./script.js"></script>
